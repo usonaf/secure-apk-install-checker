@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chequeador seguro antes de instalar APK | Tu Checklist de Seguridad APK</title>
+    <meta name="description" content="Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #212529;
+            --headline-font: 'Roboto Condensed', sans-serif;
+            --body-font: 'Roboto', sans-serif;
+            --card-bg: #ffffff;
+            --border-color: #dee2e6;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: var(--body-font);
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--card-bg);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px var(--shadow-light);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: var(--headline-font);
+            font-size: 3.5em;
+            color: var(--primary-color);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 15px auto 0;
+            color: var(--secondary-color);
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .section h2 {
+            font-family: var(--headline-font);
+            font-size: 2.2em;
+            color: var(--text-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        #tool-result {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #e9f7ef; /* Light green for results */
+            border-left: 5px solid var(--primary-color);
+            border-radius: 8px;
+            font-size: 1.1em;
+            display: none; /* Hidden by default */
+        }
+
+        #tool-result h3 {
+            font-family: var(--headline-font);
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        #tool-result p {
+            margin-bottom: 10px;
+        }
+
+        .risk-low { color: #28a745; font-weight: bold; }
+        .risk-medium { color: #ffc107; font-weight: bold; }
+        .risk-high { color: #dc3545; font-weight: bold; }
+
+        .disclaimer {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px var(--shadow-light);
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .cta-section h2 {
+            font-family: var(--headline-font);
+            font-size: 2em;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .cta-section button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            width: 100%;
+            background-color: var(--text-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        footer h3 {
+            font-family: var(--headline-font);
+            font-size: 1.8em;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        footer p {
+            max-width: 800px;
+            margin: 15px auto;
+            color: #ccc;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://secure-apk-install-checker.onrender.com">
+    <meta property="og:title" content="Chequeador seguro antes de instalar APK">
+    <meta property="og:description" content="Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.">
+    <meta property="og:url" content="https://secure-apk-install-checker.onrender.com">
+    <meta property="og:type" content="website">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Chequeador seguro antes de instalar APK", "description": "Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.", "url": "https://secure-apk-install-checker.onrender.com", "applicationCategory": "UtilityApplication", "operatingSystem": "Web Browser"}</script>
+</head>
+<body data-site-slug="secure-apk-install-checker" data-runtime-mode="analysis_tool">
+    <header>
+        <h1>Chequeador Seguro de APKs</h1>
+        <p>Antes de instalar cualquier aplicación (APK) en tu Android, usá nuestra herramienta para verificar la seguridad. Protegé tus datos y tu dispositivo de posibles riesgos.</p>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>Tu Checklist de Seguridad APK</h2>
+            <p>Completá este formulario simple para evaluar el riesgo de instalar un archivo APK. ¡Cuidar tu teléfono es cuidar tu juego!</p>
+            <form id="tool-form">
+                <div class="input-group">
+                    <input type="checkbox" id="fuenteConfiable" name="fuenteConfiable">
+                    <label for="fuenteConfiable">Descargado de una <strong>fuente oficial o de confianza</strong> (Ej: Google Play, sitio del desarrollador).</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="checkbox" id="https" name="https">
+                    <label for="https">La descarga se realizó desde un sitio con <strong>conexión HTTPS</strong> (candadito verde en el navegador).</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="checkbox" id="permisosSospechosos" name="permisosSospechosos">
+                    <label for="permisosSospechosos">Revisaste los <strong>permisos que pide la app</strong> y no parecen excesivos o sospechosos (Ej: una calculadora pidiendo acceso a contactos).</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="checkbox" id="tamañoCoherente" name="tamañoCoherente">
+                    <label for="tamañoCoherente">El <strong>tamaño del archivo</strong> es coherente con lo esperado para la aplicación (no es excesivamente chico ni grande).</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="checkbox" id="antivirusEscaneado" name="antivirusEscaneado">
+                    <label for="antivirusEscaneado">El archivo <strong>fue escaneado por un antivirus</strong> (online o de escritorio) y no encontró amenazas.</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="checkbox" id="advertenciasNavegador" name="advertenciasNavegador">
+                    <label for="advertenciasNavegador">El navegador <strong>no mostró advertencias</strong> de seguridad al descargar el APK.</label>
+                </div>
+
+                <button type="submit" id="tool-submit">¡Chequear Ahora!</button>
+            </form>
+
+            <div id="tool-result">
+                <!-- Result will be displayed here -->
+            </div>
+        </div>
+
+        <div class="section disclaimer">
+            <p><strong>Juego Responsable:</strong> Siempre priorizá la seguridad de tus dispositivos y datos personales. Las herramientas como esta te ayudan a mantener un entorno de juego más seguro. Recordá que la instalación de APKs desde fuentes no verificadas puede comprometer tu equipo y tu información. Ante cualquier duda, es mejor no instalar.</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>¿Listo para proteger tu experiencia móvil?</h2>
+            <p>Nuestra herramienta es solo el primer paso. Mantenete informado y seguro en el mundo de los juegos móviles. La prevención es clave.</p>
+            <button data-affiliate-slot="security_guide_cta">Descubrí más consejos de seguridad</button>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Protección Digital en Argentina</h3>
+        <p>En el ecosistema móvil de hoy, la seguridad de tu cuenta y el juego responsable son fundamentales. En Argentina, la precaución al descargar archivos APK es vital para evitar fraudes, robo de datos o software malicioso. Nuestro objetivo es brindarte herramientas simples y efectivas para que tu experiencia digital sea siempre positiva.</p>
+        <p>Entendemos la importancia de métodos de pago y verificación locales como CBU, CVU, alias, DNI, CUIT/CUIL, billeteras virtuales y transferencias bancarias en nuestro país, asegurando que cualquier interacción futura sea con plataformas seguras y transparentes.</p>
+        <p>Copyright &copy; 2023 Seguridad Móvil AR. Todos los derechos reservados.</p>
+        <p><a href="#">Términos y Condiciones</a> | <a href="#">Política de Privacidad</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('tool-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let score = 0;
+            const checks = {
+                fuenteConfiable: document.getElementById('fuenteConfiable').checked,
+                https: document.getElementById('https').checked,
+                permisosSospechosos: document.getElementById('permisosSospechosos').checked,
+                tamañoCoherente: document.getElementById('tamañoCoherente').checked,
+                antivirusEscaneado: document.getElementById('antivirusEscaneado').checked,
+                advertenciasNavegador: document.getElementById('advertenciasNavegador').checked
+            };
+
+            let positiveChecks = 0;
+            if (checks.fuenteConfiable) positiveChecks++;
+            if (checks.https) positiveChecks++;
+            if (checks.permisosSospechosos) positiveChecks++; // This is actually an inverse check, if checked it means it's good
+            if (checks.tamañoCoherente) positiveChecks++;
+            if (checks.antivirusEscaneado) positiveChecks++;
+            if (checks.advertenciasNavegador) positiveChecks++;
+
+            let riskLevel = '';
+            let recommendations = [];
+
+            if (positiveChecks >= 5) {
+                riskLevel = '<span class="risk-low">Bajo</span>';
+                recommendations.push('¡Excelente! Parece que tomaste muchas precauciones. El riesgo de este APK es bajo.');
+            } else if (positiveChecks >= 3) {
+                riskLevel = '<span class="risk-medium">Medio</span>';
+                recommendations.push('Hay algunos puntos a revisar. Te sugerimos precaución antes de instalar.');
+                if (!checks.fuenteConfiable) recommendations.push('<strong>Recomendación:</strong> Descargá siempre de fuentes oficiales o muy reconocidas.');
+                if (!checks.https) recommendations.push('<strong>Recomendación:</strong> Verificá que la descarga sea desde un sitio HTTPS seguro.');
+                if (!checks.permisosSospechosos) recommendations.push('<strong>Recomendación:</strong> Revisá con atención los permisos que solicita la aplicación.');
+                if (!checks.antivirusEscaneado) recommendations.push('<strong>Recomendación:</strong> Escaneá el APK con un antivirus antes de la instalación.');
+            } else {
+                riskLevel = '<span class="risk-high">Alto</span>';
+                recommendations.push('¡Atención! Hay varios indicadores de riesgo. No recomendamos instalar este APK sin una revisión exhaustiva.');
+                if (!checks.fuenteConfiable) recommendations.push('<strong>Crítico:</strong> La fuente de descarga no es confiable. Es un riesgo muy grande.');
+                if (!checks.https) recommendations.push('<strong>Crítico:</strong> La conexión no fue segura (HTTP). Podría estar manipulado.');
+                if (!checks.permisosSospechosos) recommendations.push('<strong>Crítico:</strong> Los permisos son sospechosos. No instales sin entender por qué los pide.');
+                if (!checks.tamañoCoherente) recommendations.push('<strong>Crítico:</strong> El tamaño del archivo es inusual. Podría ser un error o una manipulación.');
+                if (!checks.antivirusEscaneado) recommendations.push('<strong>Crítico:</strong> No escaneaste el archivo. Es un paso fundamental.');
+                if (!checks.advertenciasNavegador) recommendations.push('<strong>Crítico:</strong> El navegador ya te alertó. Hacete caso.');
+            }
+
+            const resultDiv = document.getElementById('tool-result');
+            resultDiv.innerHTML = `
+                <h3>Resultados de Seguridad del APK</h3>
+                <p>Tu puntaje de seguridad: <strong>${positiveChecks} / 6</strong></p>
+                <p>Nivel de Riesgo estimado: ${riskLevel}</p>
+                <h4>Recomendaciones:</h4>
+                <ul>
+                    ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                </ul>
+                <p><strong>Recordá:</strong> Esta herramienta es una guía. La decisión final siempre es tuya. ¡Mantenete seguro!</p>
+            `;
+            resultDiv.style.display = 'block';
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+<div id="qa-smoke-result" hidden></div>
+<script id="farmbuilder-affiliate-helper">
+(function () {
+  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};
+  document.addEventListener("click", function (event) {
+    const target = event.target.closest("[data-affiliate-slot]");
+    if (!target) return;
+    const slot = target.getAttribute("data-affiliate-slot");
+    const href = window.__UTILITY_AFFILIATE_MAP[slot];
+    if (!href) return;
+    if (target.tagName && target.tagName.toLowerCase() === "a") {
+      target.setAttribute("href", href);
+      target.removeAttribute("rel");
+      return;
+    }
+    event.preventDefault();
+    window.open(href, "_blank");
+  }, true);
+})();
+</script>
+<script id="farmbuilder-functional-qa">
+(function () {
+  function marker() {
+    let node = document.getElementById("qa-smoke-result");
+    if (node) return node;
+    node = document.createElement("div");
+    node.id = "qa-smoke-result";
+    node.hidden = true;
+    document.body.appendChild(node);
+    return node;
+  }
+
+  let qaFinished = false;
+  let qaWatchdog = null;
+
+  function normalize(text) {
+    return String(text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function findForm() {
+    return document.getElementById("tool-form") || document.querySelector("form");
+  }
+
+  function findResult() {
+    return (
+      document.getElementById("tool-result") ||
+      document.querySelector("[data-result]") ||
+      document.querySelector(".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis")
+    );
+  }
+
+  function primaryAction(form) {
+    if (!form) return null;
+    return (
+      document.getElementById("tool-submit") ||
+      form.querySelector("#tool-submit") ||
+      form.querySelector("[data-primary-action]") ||
+      form.querySelector("button[type=submit]") ||
+      form.querySelector("button") ||
+      form.querySelector("input[type=submit]")
+    );
+  }
+
+  function resultSignature(node) {
+    if (!node) return "";
+    const text = normalize(node.textContent);
+    const html = normalize(node.innerHTML).slice(0, 600);
+    return `${text}||${html}`;
+  }
+
+  function resultHeadline(node) {
+    if (!node) return "";
+    const heading = node.querySelector("h1, h2, h3, strong, b");
+    return normalize(heading ? heading.textContent : "");
+  }
+
+  function sampleText(field) {
+    const key = `${field.id || ""} ${field.name || ""} ${field.placeholder || ""}`.toLowerCase();
+    if (/email/.test(key)) return "bonjour@example.com";
+    if (/url|site|website|lien/.test(key)) return "https://example.com/offre-solaire";
+    if (/phone|tel|mobile/.test(key)) return "0612345678";
+    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return "Paris";
+    if (/orientation/.test(key)) return "sud";
+    if (/keyword|theme|topic|sujet|subject/.test(key)) return "energie solaire domestique";
+    if (/titre|title/.test(key)) return "Simulateur solaire maison";
+    if (/nom|name|project/.test(key)) return "Projet Horizon";
+    if (/description|notes|content|message/.test(key)) return "Maison individuelle exposee sud avec toiture exploitable.";
+    return field.placeholder || "France";
+  }
+
+  function sampleNumber(field) {
+    const key = `${field.id || ""} ${field.name || ""}`.toLowerCase();
+    if (/inclinaison|angle|slope/.test(key)) return "30";
+    if (/surface|size|m2|sqm/.test(key)) return "28";
+    if (/annee|year/.test(key)) return "2024";
+    if (/prix|price|budget|cost|amount|montant/.test(key)) return "12000";
+    const min = Number(field.min || "");
+    const max = Number(field.max || "");
+    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {
+      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));
+    }
+    if (Number.isFinite(min)) return String(Math.max(min, 12));
+    if (Number.isFinite(max)) return String(Math.min(max, 12));
+    return field.value || "12";
+  }
+
+  function applySample(field) {
+    const tag = (field.tagName || "").toLowerCase();
+    const type = (field.type || "").toLowerCase();
+    if (field.disabled) return;
+    if (type === "hidden" || type === "submit" || type === "button" || type === "reset" || type === "image" || type === "file") {
+      return;
+    }
+    const currentValue = normalize(field.value);
+    if (tag === "select") {
+      if (currentValue) return;
+      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];
+      if (option) field.value = option.value;
+      return;
+    }
+    if (type === "checkbox") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "radio") {
+      if (field.checked) return;
+      field.checked = true;
+      return;
+    }
+    if (type === "date") {
+      if (currentValue) return;
+      field.value = "2026-03-01";
+      return;
+    }
+    if (type === "email") {
+      if (currentValue) return;
+      field.value = "bonjour@example.com";
+      return;
+    }
+    if (type === "url") {
+      if (currentValue) return;
+      field.value = "https://example.com/offre-solaire";
+      return;
+    }
+    if (type === "tel") {
+      if (currentValue) return;
+      field.value = "0612345678";
+      return;
+    }
+    if (type === "color") {
+      if (currentValue) return;
+      field.value = "#2f855a";
+      return;
+    }
+    if (type === "number" || type === "range") {
+      if (currentValue) return;
+      field.value = sampleNumber(field);
+      return;
+    }
+    if (currentValue) return;
+    field.value = sampleText(field);
+  }
+
+  function stamp(status, detail, headline, primary) {
+    if (qaFinished) return;
+    qaFinished = true;
+    if (qaWatchdog) {
+      window.clearTimeout(qaWatchdog);
+      qaWatchdog = null;
+    }
+    const node = marker();
+    node.dataset.status = status;
+    node.dataset.mode = "native-form";
+    node.dataset.detail = detail || "";
+    node.dataset.headline = headline || "";
+    node.dataset.primary = primary || "";
+    node.dataset.viewport = window.innerWidth <= 640 ? "mobile" : "desktop";
+    window.setTimeout(function () {
+      try {
+        window.stop();
+      } catch (_error) {}
+    }, 0);
+  }
+
+  function installModalGuards() {
+    const noop = function () {};
+    const approve = function () { return true; };
+    const empty = function () { return ""; };
+    try { window.alert = noop; } catch (_error) {}
+    try { window.confirm = approve; } catch (_error) {}
+    try { window.prompt = empty; } catch (_error) {}
+  }
+
+  function triggerAction(form, action) {
+    try {
+      if (typeof form.requestSubmit === "function") {
+        form.requestSubmit(action || undefined);
+        return;
+      }
+    } catch (_error) {}
+    if (action && typeof action.click === "function") {
+      action.click();
+      return;
+    }
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+  }
+
+  function inspectResult(before, attemptsLeft) {
+    const result = findResult();
+    if (!result) {
+      stamp("fail", "Result area was not found.", "");
+      return;
+    }
+    const after = resultSignature(result);
+    const text = normalize(result.textContent);
+    if (after && after !== before && text.length >= 24) {
+      const primary = result.querySelector("a[href], button[data-href], [data-primary-url]") || document.querySelector("#tool-result a[href]");
+      stamp("pass", "Native form submission updated the result area.", resultHeadline(result), primary ? (primary.getAttribute("href") || primary.getAttribute("data-primary-url") || "") : "");
+      return;
+    }
+    if (attemptsLeft > 0) {
+      window.setTimeout(function () {
+        inspectResult(before, attemptsLeft - 1);
+      }, 250);
+      return;
+    }
+    stamp("fail", "Result area did not render usable output.", resultHeadline(result));
+  }
+
+  function runSmoke() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("__qa") !== "functional") return;
+    qaWatchdog = window.setTimeout(function () {
+      stamp("fail", "QA smoke timed out before the page reported a usable result.", "");
+    }, 7000);
+    const form = findForm();
+    if (!form) {
+      stamp("fail", "Primary tool form was not found.", "");
+      return;
+    }
+    const result = findResult();
+    const before = resultSignature(result);
+    installModalGuards();
+    try {
+      form.querySelectorAll("input, select, textarea").forEach(applySample);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke sample failed: ${error.message}` : "QA smoke sample failed before submit.", "");
+      return;
+    }
+    const action = primaryAction(form);
+    try {
+      triggerAction(form, action);
+    } catch (error) {
+      stamp("fail", error && error.message ? `QA smoke submit failed: ${error.message}` : "QA smoke submit failed.", "");
+      return;
+    }
+    inspectResult(before, 10);
+  }
+
+  window.addEventListener("error", function (event) {
+    const message = event && event.message ? event.message : "JavaScript runtime error during QA smoke.";
+    stamp("fail", `QA smoke JS error: ${message}`, "");
+  }, { once: true });
+
+  window.addEventListener("unhandledrejection", function (event) {
+    const reason = event && event.reason;
+    const detail = typeof reason === "string"
+      ? reason
+      : reason && reason.message
+        ? reason.message
+        : "Unhandled promise rejection during QA smoke.";
+    stamp("fail", `QA smoke rejection: ${detail}`, "");
+  }, { once: true });
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.setTimeout(runSmoke, 60);
+    }, { once: true });
+  } else {
+    window.setTimeout(runSmoke, 60);
+  }
+})();
+</script>
+</body>
+</html>
