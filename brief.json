@@ -1,0 +1,291 @@
+{
+  "run_id": "run-1779495708244",
+  "job_index": 3,
+  "params": {
+    "owner_user_id": "user-1774822953462",
+    "owner_username": "admin",
+    "owner_display_name": "Administrator",
+    "count": 10,
+    "archetype": "tool",
+    "market": "Argentina - herramientas para juegos móviles, seguridad de cuenta y juego responsable",
+    "language": "es",
+    "country": "AR",
+    "brief": "Chequeador de seguridad para instalar APK.",
+    "notes": "Crear sitios en español rioplatense para Argentina. Deben ser herramientas web reales, con formulario funcional, resultado visible, copy claro y disclaimer de juego responsable. No prometer ganancias, no incentivar apuestas, no usar claims de casino. Localizar pagos/KYC a CBU, CVU, alias, DNI, CUIT/CUIL, billetera virtual y transferencia bancaria.\nChecklist de seguridad antes de instalar un APK en Android.\nCampos: tipo de fuente, HTTPS, permisos, tamaño del archivo, escaneo antivirus, advertencias del navegador. Resultado: score, nivel de riesgo y recomendaciones.",
+    "import_notes": "",
+    "growth_job_id": "",
+    "growth_slug": "",
+    "growth_kind": "",
+    "external_site_request_id": "",
+    "external_client_ref": "",
+    "external_source_label": "",
+    "dashboard_mode": "builder",
+    "network_site_format": "forum",
+    "network_primary_topic": "",
+    "network_primary_geo": "",
+    "network_domain_pool": "forum-de-jeu.shop",
+    "network_hosting_pool": "4vps:netoper | server_id=447345 | ip=5.253.59.18 | ssh_user=root | ssh_port=22",
+    "network_dns_strategy": "auto_pool_assign",
+    "network_domain_flow": "manual",
+    "network_content_strategy": "",
+    "network_model_concept": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_seo": "google/gemini-2.5-flash-lite:nitro",
+    "network_model_build": "google/gemini-2.5-flash",
+    "network_model_qa": "anthropic/claude-haiku-4.5",
+    "network_model_growth": "google/gemini-2.5-flash-lite:nitro",
+    "network_blueprint_id": "",
+    "mode": "production",
+    "run_kind": "generated_batch",
+    "publish_target": "render",
+    "requested_publish_target": "render",
+    "provider_space_id": "provider-space",
+    "provider_space_name": "Provider space",
+    "allow_url_fallback": false,
+    "railway_project_id_override": "",
+    "railway_environment_id_override": "",
+    "railway_service_id_override": "",
+    "railway_service_name_override": "",
+    "github_repo_private": true,
+    "stage_models": {
+      "ideation": "google/gemini-2.5-flash-lite:nitro",
+      "spec": "google/gemini-2.5-flash",
+      "copy": "google/gemini-2.5-flash-lite:nitro",
+      "qa": "anthropic/claude-haiku-4.5",
+      "escalation": "anthropic/claude-sonnet-4.6"
+    },
+    "archetype_display": "mixed batch",
+    "archetype_mix": [
+      "calculator",
+      "tool",
+      "generator"
+    ],
+    "site_idea_title": "Chequeador seguro antes de instalar APK",
+    "site_idea_summary": "Checklist de seguridad antes de instalar un APK en Android.",
+    "forced_slug": "secure-apk-install-checker"
+  },
+  "site_spec": {
+    "slug": "secure-apk-install-checker",
+    "theme": {
+      "name": "Kinetic Minimal",
+      "slug": "kinetic-minimal",
+      "eyebrow": "Modern Motion",
+      "family": "kinetic-minimal",
+      "moods": [
+        "clean",
+        "kinetic",
+        "modern",
+        "friendly"
+      ],
+      "archetypes": [
+        "tool",
+        "generator"
+      ],
+      "niches": [
+        "content tools",
+        "text tools",
+        "creative utility",
+        "productivity",
+        "education"
+      ],
+      "keywords": [
+        "editor",
+        "generator",
+        "copy",
+        "writing",
+        "productivity"
+      ],
+      "token_index": [
+        "clean",
+        "content",
+        "copy",
+        "creative",
+        "editor",
+        "education",
+        "friendly",
+        "generator",
+        "kinetic",
+        "minimal",
+        "modern",
+        "motion",
+        "productivity",
+        "text",
+        "tool",
+        "tools",
+        "utility",
+        "writing"
+      ],
+      "font_embed": "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap",
+      "display_font": "\"Syne\", sans-serif",
+      "body_font": "\"IBM Plex Sans\", sans-serif",
+      "layout": "editorial",
+      "card_style": "glass",
+      "button_style": "outline",
+      "decor_style": "ribbons",
+      "hero_template": "1fr",
+      "seo_template": "1fr",
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "hero_min_height": "70vh",
+      "panel_radius": "28px",
+      "card_radius": "26px",
+      "chip_radius": "999px",
+      "button_radius": "18px",
+      "outline_width": "1px",
+      "backdrop_blur": "16px",
+      "palette": {
+        "bg": "linear-gradient(130deg, #fafaf9 0%, #eef2ff 48%, #f5f3ff 100%)",
+        "surface": "rgba(255,255,255,0.86)",
+        "surface_border": "rgba(39,39,42,0.1)",
+        "text": "#18181b",
+        "muted": "#52525b",
+        "accent": "#2563eb",
+        "accent_alt": "#7c3aed",
+        "hero_glow": "rgba(124, 58, 237, 0.12)",
+        "button_text": "#f8fafc",
+        "panel_alt": "rgba(255,255,255,0.72)",
+        "shadow": "0 28px 70px rgba(63, 63, 70, 0.1)",
+        "input_fill": "rgba(24,24,27,0.03)"
+      }
+    },
+    "structure": {
+      "name": "Story Commerce",
+      "slug": "story-commerce",
+      "hero_variant": "poster",
+      "proof_variant": "steps",
+      "section_order": [
+        "features",
+        "proof",
+        "seo",
+        "faq"
+      ],
+      "feature_columns": 2,
+      "faq_columns": 2,
+      "family": "story-commerce",
+      "moods": [
+        "bold",
+        "editorial",
+        "conversion"
+      ],
+      "archetypes": [
+        "generator",
+        "tool",
+        "calculator"
+      ],
+      "niches": [
+        "creator",
+        "consumer",
+        "travel",
+        "marketing"
+      ],
+      "keywords": [
+        "story",
+        "banner",
+        "campaign",
+        "conversion"
+      ],
+      "token_index": [
+        "banner",
+        "bold",
+        "calculator",
+        "campaign",
+        "commerce",
+        "consumer",
+        "conversion",
+        "creator",
+        "editorial",
+        "faq",
+        "features",
+        "generator",
+        "marketing",
+        "poster",
+        "proof",
+        "seo",
+        "steps",
+        "story",
+        "tool",
+        "travel"
+      ]
+    },
+    "render_direction": "campaign-slab",
+    "render_direction_name": "Campaign Slab",
+    "page_blueprint": "dossier-rail",
+    "page_blueprint_name": "Dossier Rail",
+    "title": "Chequeador seguro antes de instalar APK",
+    "tagline": "Tu Checklist de Seguridad APK",
+    "description": "Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.",
+    "feature_prefix": "Módulo",
+    "action": "Usar la herramienta",
+    "cta_primary": "¡Chequear Ahora!",
+    "cta_secondary": "Leer la FAQ",
+    "inputs": [
+      {
+        "id": "primary",
+        "label": "Texto o necesidad",
+        "type": "text",
+        "placeholder": "Tu necesidad principal",
+        "weight": 1.0
+      },
+      {
+        "id": "context",
+        "label": "Contexto",
+        "type": "text",
+        "placeholder": "Situación u objetivo",
+        "weight": 1.0
+      },
+      {
+        "id": "scope",
+        "label": "Intensidad",
+        "type": "number",
+        "placeholder": "3",
+        "weight": 0.3
+      }
+    ],
+    "hero_metrics": [
+      {
+        "value": "Campaign Slab",
+        "label": "Cadencia"
+      },
+      {
+        "value": "3",
+        "label": "Entradas"
+      },
+      {
+        "value": "Resultado recomendado",
+        "label": "Salida"
+      }
+    ],
+    "trust_labels": [
+      "Campaign Slab",
+      "¡Chequear Ahora!",
+      "Resultado recomendado",
+      "Utilidad inmediata",
+      "Estructura SEO clara"
+    ],
+    "result_label": "Resultado recomendado",
+    "result_unit": "",
+    "runtime_mode": "analysis_tool",
+    "page_variant": "showcase",
+    "faq_topic": "Chequeador seguro antes de instalar APK",
+    "faq_entries": [
+      {
+        "question": "¿Por qué usar esta herramienta para Chequeador seguro antes de instalar APK?",
+        "answer": "Ayuda a definir la necesidad rápidamente y a guiar hacia una siguiente acción clara en Argentina - herramientas para juegos móviles, seguridad de cuenta y juego responsable."
+      },
+      {
+        "question": "¿El resultado es inmediato?",
+        "answer": "Sí. La interfaz está pensada para devolver una respuesta rápida y clara desde la primera interacción."
+      },
+      {
+        "question": "¿La página está preparada para SEO?",
+        "answer": "Sí. La estructura combina utilidad, claridad editorial y señales de confianza sin recargar la experiencia."
+      }
+    ],
+    "seo_paragraphs": [
+      "Esta página está diseñada para captar una intención fuerte sobre Chequeador seguro antes de instalar APK y convertirla en una acción medible en Argentina - herramientas para juegos móviles, seguridad de cuenta y juego responsable.",
+      "La estructura hero-first mejora la claridad, reduce fricción y funciona bien tanto en móvil como en escritorio.",
+      "La base se mantiene ligera para facilitar pruebas, QA continua y variaciones SEO repetibles."
+    ],
+    "document_html": "<!DOCTYPE html>\n<html lang=\"es\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Chequeador seguro antes de instalar APK | Tu Checklist de Seguridad APK</title>\n    <meta name=\"description\" content=\"Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.\">\n    <style>\n        :root {\n            --primary-color: #007bff;\n            --secondary-color: #6c757d;\n            --background-color: #f8f9fa;\n            --text-color: #212529;\n            --headline-font: 'Roboto Condensed', sans-serif;\n            --body-font: 'Roboto', sans-serif;\n            --card-bg: #ffffff;\n            --border-color: #dee2e6;\n            --shadow-light: rgba(0, 0, 0, 0.05);\n            --shadow-medium: rgba(0, 0, 0, 0.1);\n        }\n\n        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@400;700&display=swap');\n\n        body {\n            font-family: var(--body-font);\n            color: var(--text-color);\n            background-color: var(--background-color);\n            margin: 0;\n            padding: 0;\n            line-height: 1.6;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n        }\n\n        header {\n            width: 100%;\n            background-color: var(--card-bg);\n            padding: 40px 20px;\n            text-align: center;\n            box-shadow: 0 4px 6px var(--shadow-light);\n            margin-bottom: 20px;\n        }\n\n        header h1 {\n            font-family: var(--headline-font);\n            font-size: 3.5em;\n            color: var(--primary-color);\n            margin: 0;\n            text-transform: uppercase;\n            letter-spacing: -1px;\n        }\n\n        header p {\n            font-size: 1.2em;\n            max-width: 800px;\n            margin: 15px auto 0;\n            color: var(--secondary-color);\n        }\n\n        main {\n            width: 100%;\n            max-width: 900px;\n            padding: 0 20px;\n            box-sizing: border-box;\n        }\n\n        .section {\n            background-color: var(--card-bg);\n            padding: 30px;\n            margin-bottom: 20px;\n            border-radius: 8px;\n            box-shadow: 0 2px 4px var(--shadow-light);\n            border: 1px solid var(--border-color);\n        }\n\n        .section h2 {\n            font-family: var(--headline-font);\n            font-size: 2.2em;\n            color: var(--text-color);\n            margin-top: 0;\n            margin-bottom: 20px;\n            border-bottom: 2px solid var(--primary-color);\n            padding-bottom: 10px;\n        }\n\n        form {\n            display: grid;\n            gap: 20px;\n        }\n\n        label {\n            font-weight: bold;\n            display: block;\n            margin-bottom: 5px;\n            color: var(--primary-color);\n        }\n\n        input[type=\"checkbox\"] {\n            margin-right: 10px;\n        }\n\n        .input-group {\n            display: flex;\n            align-items: center;\n            margin-bottom: 10px;\n        }\n\n        button {\n            background-color: var(--primary-color);\n            color: white;\n            padding: 15px 25px;\n            border: none;\n            border-radius: 5px;\n            cursor: pointer;\n            font-size: 1.1em;\n            font-weight: bold;\n            transition: background-color 0.3s ease, transform 0.2s ease;\n            margin-top: 20px;\n        }\n\n        button:hover {\n            background-color: #0056b3;\n            transform: translateY(-2px);\n        }\n\n        #tool-result {\n            margin-top: 30px;\n            padding: 25px;\n            background-color: #e9f7ef; /* Light green for results */\n            border-left: 5px solid var(--primary-color);\n            border-radius: 8px;\n            font-size: 1.1em;\n            display: none; /* Hidden by default */\n        }\n\n        #tool-result h3 {\n            font-family: var(--headline-font);\n            color: var(--primary-color);\n            margin-top: 0;\n            font-size: 1.8em;\n        }\n\n        #tool-result p {\n            margin-bottom: 10px;\n        }\n\n        .risk-low { color: #28a745; font-weight: bold; }\n        .risk-medium { color: #ffc107; font-weight: bold; }\n        .risk-high { color: #dc3545; font-weight: bold; }\n\n        .disclaimer {\n            font-size: 0.9em;\n            color: var(--secondary-color);\n            text-align: center;\n            margin-top: 30px;\n            padding: 20px;\n            background-color: #f1f1f1;\n            border-radius: 8px;\n        }\n\n        .cta-section {\n            text-align: center;\n            padding: 40px 20px;\n            background-color: var(--card-bg);\n            border-radius: 8px;\n            box-shadow: 0 2px 4px var(--shadow-light);\n            margin-top: 20px;\n            border: 1px solid var(--border-color);\n        }\n\n        .cta-section h2 {\n            font-family: var(--headline-font);\n            font-size: 2em;\n            color: var(--text-color);\n            margin-bottom: 15px;\n        }\n\n        .cta-section p {\n            max-width: 700px;\n            margin: 0 auto 25px;\n        }\n\n        .cta-section button {\n            background-color: #28a745;\n            color: white;\n            padding: 15px 30px;\n            font-size: 1.2em;\n            border-radius: 8px;\n            transition: background-color 0.3s ease;\n        }\n\n        .cta-section button:hover {\n            background-color: #218838;\n        }\n\n        footer {\n            width: 100%;\n            background-color: var(--text-color);\n            color: white;\n            padding: 40px 20px;\n            text-align: center;\n            margin-top: 40px;\n            font-size: 0.9em;\n        }\n\n        footer h3 {\n            font-family: var(--headline-font);\n            font-size: 1.8em;\n            margin-top: 0;\n            color: var(--primary-color);\n        }\n\n        footer p {\n            max-width: 800px;\n            margin: 15px auto;\n            color: #ccc;\n        }\n\n        footer a {\n            color: var(--primary-color);\n            text-decoration: none;\n        }\n\n        footer a:hover {\n            text-decoration: underline;\n        }\n    </style>\n    <meta name=\"robots\" content=\"index, follow\">\n    <link rel=\"canonical\" href=\"https://secure-apk-install-checker.onrender.com\">\n    <meta property=\"og:title\" content=\"Chequeador seguro antes de instalar APK\">\n    <meta property=\"og:description\" content=\"Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.\">\n    <meta property=\"og:url\" content=\"https://secure-apk-install-checker.onrender.com\">\n    <meta property=\"og:type\" content=\"website\">\n    <script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebApplication\", \"name\": \"Chequeador seguro antes de instalar APK\", \"description\": \"Checklist de seguridad antes de instalar un APK en Android. Verificá la fuente, permisos, tamaño y escaneo antivirus para un juego móvil seguro.\", \"url\": \"https://secure-apk-install-checker.onrender.com\", \"applicationCategory\": \"UtilityApplication\", \"operatingSystem\": \"Web Browser\"}</script>\n</head>\n<body data-site-slug=\"secure-apk-install-checker\" data-runtime-mode=\"analysis_tool\">\n    <header>\n        <h1>Chequeador Seguro de APKs</h1>\n        <p>Antes de instalar cualquier aplicación (APK) en tu Android, usá nuestra herramienta para verificar la seguridad. Protegé tus datos y tu dispositivo de posibles riesgos.</p>\n    </header>\n\n    <main>\n        <div class=\"section\">\n            <h2>Tu Checklist de Seguridad APK</h2>\n            <p>Completá este formulario simple para evaluar el riesgo de instalar un archivo APK. ¡Cuidar tu teléfono es cuidar tu juego!</p>\n            <form id=\"tool-form\">\n                <div class=\"input-group\">\n                    <input type=\"checkbox\" id=\"fuenteConfiable\" name=\"fuenteConfiable\">\n                    <label for=\"fuenteConfiable\">Descargado de una <strong>fuente oficial o de confianza</strong> (Ej: Google Play, sitio del desarrollador).</label>\n                </div>\n\n                <div class=\"input-group\">\n                    <input type=\"checkbox\" id=\"https\" name=\"https\">\n                    <label for=\"https\">La descarga se realizó desde un sitio con <strong>conexión HTTPS</strong> (candadito verde en el navegador).</label>\n                </div>\n\n                <div class=\"input-group\">\n                    <input type=\"checkbox\" id=\"permisosSospechosos\" name=\"permisosSospechosos\">\n                    <label for=\"permisosSospechosos\">Revisaste los <strong>permisos que pide la app</strong> y no parecen excesivos o sospechosos (Ej: una calculadora pidiendo acceso a contactos).</label>\n                </div>\n\n                <div class=\"input-group\">\n                    <input type=\"checkbox\" id=\"tamañoCoherente\" name=\"tamañoCoherente\">\n                    <label for=\"tamañoCoherente\">El <strong>tamaño del archivo</strong> es coherente con lo esperado para la aplicación (no es excesivamente chico ni grande).</label>\n                </div>\n\n                <div class=\"input-group\">\n                    <input type=\"checkbox\" id=\"antivirusEscaneado\" name=\"antivirusEscaneado\">\n                    <label for=\"antivirusEscaneado\">El archivo <strong>fue escaneado por un antivirus</strong> (online o de escritorio) y no encontró amenazas.</label>\n                </div>\n\n                <div class=\"input-group\">\n                    <input type=\"checkbox\" id=\"advertenciasNavegador\" name=\"advertenciasNavegador\">\n                    <label for=\"advertenciasNavegador\">El navegador <strong>no mostró advertencias</strong> de seguridad al descargar el APK.</label>\n                </div>\n\n                <button type=\"submit\" id=\"tool-submit\">¡Chequear Ahora!</button>\n            </form>\n\n            <div id=\"tool-result\">\n                <!-- Result will be displayed here -->\n            </div>\n        </div>\n\n        <div class=\"section disclaimer\">\n            <p><strong>Juego Responsable:</strong> Siempre priorizá la seguridad de tus dispositivos y datos personales. Las herramientas como esta te ayudan a mantener un entorno de juego más seguro. Recordá que la instalación de APKs desde fuentes no verificadas puede comprometer tu equipo y tu información. Ante cualquier duda, es mejor no instalar.</p>\n        </div>\n\n        <div class=\"cta-section\">\n            <h2>¿Listo para proteger tu experiencia móvil?</h2>\n            <p>Nuestra herramienta es solo el primer paso. Mantenete informado y seguro en el mundo de los juegos móviles. La prevención es clave.</p>\n            <button data-affiliate-slot=\"security_guide_cta\">Descubrí más consejos de seguridad</button>\n        </div>\n    </main>\n\n    <footer>\n        <h3>Protección Digital en Argentina</h3>\n        <p>En el ecosistema móvil de hoy, la seguridad de tu cuenta y el juego responsable son fundamentales. En Argentina, la precaución al descargar archivos APK es vital para evitar fraudes, robo de datos o software malicioso. Nuestro objetivo es brindarte herramientas simples y efectivas para que tu experiencia digital sea siempre positiva.</p>\n        <p>Entendemos la importancia de métodos de pago y verificación locales como CBU, CVU, alias, DNI, CUIT/CUIL, billeteras virtuales y transferencias bancarias en nuestro país, asegurando que cualquier interacción futura sea con plataformas seguras y transparentes.</p>\n        <p>Copyright &copy; 2023 Seguridad Móvil AR. Todos los derechos reservados.</p>\n        <p><a href=\"#\">Términos y Condiciones</a> | <a href=\"#\">Política de Privacidad</a></p>\n    </footer>\n\n    <script>\n        document.getElementById('tool-form').addEventListener('submit', function(event) {\n            event.preventDefault();\n\n            let score = 0;\n            const checks = {\n                fuenteConfiable: document.getElementById('fuenteConfiable').checked,\n                https: document.getElementById('https').checked,\n                permisosSospechosos: document.getElementById('permisosSospechosos').checked,\n                tamañoCoherente: document.getElementById('tamañoCoherente').checked,\n                antivirusEscaneado: document.getElementById('antivirusEscaneado').checked,\n                advertenciasNavegador: document.getElementById('advertenciasNavegador').checked\n            };\n\n            let positiveChecks = 0;\n            if (checks.fuenteConfiable) positiveChecks++;\n            if (checks.https) positiveChecks++;\n            if (checks.permisosSospechosos) positiveChecks++; // This is actually an inverse check, if checked it means it's good\n            if (checks.tamañoCoherente) positiveChecks++;\n            if (checks.antivirusEscaneado) positiveChecks++;\n            if (checks.advertenciasNavegador) positiveChecks++;\n\n            let riskLevel = '';\n            let recommendations = [];\n\n            if (positiveChecks >= 5) {\n                riskLevel = '<span class=\"risk-low\">Bajo</span>';\n                recommendations.push('¡Excelente! Parece que tomaste muchas precauciones. El riesgo de este APK es bajo.');\n            } else if (positiveChecks >= 3) {\n                riskLevel = '<span class=\"risk-medium\">Medio</span>';\n                recommendations.push('Hay algunos puntos a revisar. Te sugerimos precaución antes de instalar.');\n                if (!checks.fuenteConfiable) recommendations.push('<strong>Recomendación:</strong> Descargá siempre de fuentes oficiales o muy reconocidas.');\n                if (!checks.https) recommendations.push('<strong>Recomendación:</strong> Verificá que la descarga sea desde un sitio HTTPS seguro.');\n                if (!checks.permisosSospechosos) recommendations.push('<strong>Recomendación:</strong> Revisá con atención los permisos que solicita la aplicación.');\n                if (!checks.antivirusEscaneado) recommendations.push('<strong>Recomendación:</strong> Escaneá el APK con un antivirus antes de la instalación.');\n            } else {\n                riskLevel = '<span class=\"risk-high\">Alto</span>';\n                recommendations.push('¡Atención! Hay varios indicadores de riesgo. No recomendamos instalar este APK sin una revisión exhaustiva.');\n                if (!checks.fuenteConfiable) recommendations.push('<strong>Crítico:</strong> La fuente de descarga no es confiable. Es un riesgo muy grande.');\n                if (!checks.https) recommendations.push('<strong>Crítico:</strong> La conexión no fue segura (HTTP). Podría estar manipulado.');\n                if (!checks.permisosSospechosos) recommendations.push('<strong>Crítico:</strong> Los permisos son sospechosos. No instales sin entender por qué los pide.');\n                if (!checks.tamañoCoherente) recommendations.push('<strong>Crítico:</strong> El tamaño del archivo es inusual. Podría ser un error o una manipulación.');\n                if (!checks.antivirusEscaneado) recommendations.push('<strong>Crítico:</strong> No escaneaste el archivo. Es un paso fundamental.');\n                if (!checks.advertenciasNavegador) recommendations.push('<strong>Crítico:</strong> El navegador ya te alertó. Hacete caso.');\n            }\n\n            const resultDiv = document.getElementById('tool-result');\n            resultDiv.innerHTML = `\n                <h3>Resultados de Seguridad del APK</h3>\n                <p>Tu puntaje de seguridad: <strong>${positiveChecks} / 6</strong></p>\n                <p>Nivel de Riesgo estimado: ${riskLevel}</p>\n                <h4>Recomendaciones:</h4>\n                <ul>\n                    ${recommendations.map(rec => `<li>${rec}</li>`).join('')}\n                </ul>\n                <p><strong>Recordá:</strong> Esta herramienta es una guía. La decisión final siempre es tuya. ¡Mantenete seguro!</p>\n            `;\n            resultDiv.style.display = 'block';\n            resultDiv.scrollIntoView({ behavior: 'smooth' });\n        });\n    </script>\n<div id=\"qa-smoke-result\" hidden></div>\n<script id=\"farmbuilder-affiliate-helper\">\n(function () {\n  window.__UTILITY_AFFILIATE_MAP = window.__UTILITY_AFFILIATE_MAP || {};\n  document.addEventListener(\"click\", function (event) {\n    const target = event.target.closest(\"[data-affiliate-slot]\");\n    if (!target) return;\n    const slot = target.getAttribute(\"data-affiliate-slot\");\n    const href = window.__UTILITY_AFFILIATE_MAP[slot];\n    if (!href) return;\n    if (target.tagName && target.tagName.toLowerCase() === \"a\") {\n      target.setAttribute(\"href\", href);\n      target.removeAttribute(\"rel\");\n      return;\n    }\n    event.preventDefault();\n    window.open(href, \"_blank\");\n  }, true);\n})();\n</script>\n<script id=\"farmbuilder-functional-qa\">\n(function () {\n  function marker() {\n    let node = document.getElementById(\"qa-smoke-result\");\n    if (node) return node;\n    node = document.createElement(\"div\");\n    node.id = \"qa-smoke-result\";\n    node.hidden = true;\n    document.body.appendChild(node);\n    return node;\n  }\n\n  let qaFinished = false;\n  let qaWatchdog = null;\n\n  function normalize(text) {\n    return String(text || \"\").replace(/\\s+/g, \" \").trim();\n  }\n\n  function findForm() {\n    return document.getElementById(\"tool-form\") || document.querySelector(\"form\");\n  }\n\n  function findResult() {\n    return (\n      document.getElementById(\"tool-result\") ||\n      document.querySelector(\"[data-result]\") ||\n      document.querySelector(\".tool-result, .result-card, .result, .results, .output, .preview, .diagnostic, .analysis\")\n    );\n  }\n\n  function primaryAction(form) {\n    if (!form) return null;\n    return (\n      document.getElementById(\"tool-submit\") ||\n      form.querySelector(\"#tool-submit\") ||\n      form.querySelector(\"[data-primary-action]\") ||\n      form.querySelector(\"button[type=submit]\") ||\n      form.querySelector(\"button\") ||\n      form.querySelector(\"input[type=submit]\")\n    );\n  }\n\n  function resultSignature(node) {\n    if (!node) return \"\";\n    const text = normalize(node.textContent);\n    const html = normalize(node.innerHTML).slice(0, 600);\n    return `${text}||${html}`;\n  }\n\n  function resultHeadline(node) {\n    if (!node) return \"\";\n    const heading = node.querySelector(\"h1, h2, h3, strong, b\");\n    return normalize(heading ? heading.textContent : \"\");\n  }\n\n  function sampleText(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"} ${field.placeholder || \"\"}`.toLowerCase();\n    if (/email/.test(key)) return \"bonjour@example.com\";\n    if (/url|site|website|lien/.test(key)) return \"https://example.com/offre-solaire\";\n    if (/phone|tel|mobile/.test(key)) return \"0612345678\";\n    if (/ville|city|localisation|location|region|departement|postal/.test(key)) return \"Paris\";\n    if (/orientation/.test(key)) return \"sud\";\n    if (/keyword|theme|topic|sujet|subject/.test(key)) return \"energie solaire domestique\";\n    if (/titre|title/.test(key)) return \"Simulateur solaire maison\";\n    if (/nom|name|project/.test(key)) return \"Projet Horizon\";\n    if (/description|notes|content|message/.test(key)) return \"Maison individuelle exposee sud avec toiture exploitable.\";\n    return field.placeholder || \"France\";\n  }\n\n  function sampleNumber(field) {\n    const key = `${field.id || \"\"} ${field.name || \"\"}`.toLowerCase();\n    if (/inclinaison|angle|slope/.test(key)) return \"30\";\n    if (/surface|size|m2|sqm/.test(key)) return \"28\";\n    if (/annee|year/.test(key)) return \"2024\";\n    if (/prix|price|budget|cost|amount|montant/.test(key)) return \"12000\";\n    const min = Number(field.min || \"\");\n    const max = Number(field.max || \"\");\n    if (Number.isFinite(min) && Number.isFinite(max) && max >= min) {\n      return String(Math.min(max, Math.max(min, min + Math.round((max - min) * 0.35))));\n    }\n    if (Number.isFinite(min)) return String(Math.max(min, 12));\n    if (Number.isFinite(max)) return String(Math.min(max, 12));\n    return field.value || \"12\";\n  }\n\n  function applySample(field) {\n    const tag = (field.tagName || \"\").toLowerCase();\n    const type = (field.type || \"\").toLowerCase();\n    if (field.disabled) return;\n    if (type === \"hidden\" || type === \"submit\" || type === \"button\" || type === \"reset\" || type === \"image\" || type === \"file\") {\n      return;\n    }\n    const currentValue = normalize(field.value);\n    if (tag === \"select\") {\n      if (currentValue) return;\n      const option = Array.from(field.options || []).find((item) => item.value && !item.disabled) || field.options[0];\n      if (option) field.value = option.value;\n      return;\n    }\n    if (type === \"checkbox\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"radio\") {\n      if (field.checked) return;\n      field.checked = true;\n      return;\n    }\n    if (type === \"date\") {\n      if (currentValue) return;\n      field.value = \"2026-03-01\";\n      return;\n    }\n    if (type === \"email\") {\n      if (currentValue) return;\n      field.value = \"bonjour@example.com\";\n      return;\n    }\n    if (type === \"url\") {\n      if (currentValue) return;\n      field.value = \"https://example.com/offre-solaire\";\n      return;\n    }\n    if (type === \"tel\") {\n      if (currentValue) return;\n      field.value = \"0612345678\";\n      return;\n    }\n    if (type === \"color\") {\n      if (currentValue) return;\n      field.value = \"#2f855a\";\n      return;\n    }\n    if (type === \"number\" || type === \"range\") {\n      if (currentValue) return;\n      field.value = sampleNumber(field);\n      return;\n    }\n    if (currentValue) return;\n    field.value = sampleText(field);\n  }\n\n  function stamp(status, detail, headline, primary) {\n    if (qaFinished) return;\n    qaFinished = true;\n    if (qaWatchdog) {\n      window.clearTimeout(qaWatchdog);\n      qaWatchdog = null;\n    }\n    const node = marker();\n    node.dataset.status = status;\n    node.dataset.mode = \"native-form\";\n    node.dataset.detail = detail || \"\";\n    node.dataset.headline = headline || \"\";\n    node.dataset.primary = primary || \"\";\n    node.dataset.viewport = window.innerWidth <= 640 ? \"mobile\" : \"desktop\";\n    window.setTimeout(function () {\n      try {\n        window.stop();\n      } catch (_error) {}\n    }, 0);\n  }\n\n  function installModalGuards() {\n    const noop = function () {};\n    const approve = function () { return true; };\n    const empty = function () { return \"\"; };\n    try { window.alert = noop; } catch (_error) {}\n    try { window.confirm = approve; } catch (_error) {}\n    try { window.prompt = empty; } catch (_error) {}\n  }\n\n  function triggerAction(form, action) {\n    try {\n      if (typeof form.requestSubmit === \"function\") {\n        form.requestSubmit(action || undefined);\n        return;\n      }\n    } catch (_error) {}\n    if (action && typeof action.click === \"function\") {\n      action.click();\n      return;\n    }\n    form.dispatchEvent(new Event(\"submit\", { bubbles: true, cancelable: true }));\n  }\n\n  function inspectResult(before, attemptsLeft) {\n    const result = findResult();\n    if (!result) {\n      stamp(\"fail\", \"Result area was not found.\", \"\");\n      return;\n    }\n    const after = resultSignature(result);\n    const text = normalize(result.textContent);\n    if (after && after !== before && text.length >= 24) {\n      const primary = result.querySelector(\"a[href], button[data-href], [data-primary-url]\") || document.querySelector(\"#tool-result a[href]\");\n      stamp(\"pass\", \"Native form submission updated the result area.\", resultHeadline(result), primary ? (primary.getAttribute(\"href\") || primary.getAttribute(\"data-primary-url\") || \"\") : \"\");\n      return;\n    }\n    if (attemptsLeft > 0) {\n      window.setTimeout(function () {\n        inspectResult(before, attemptsLeft - 1);\n      }, 250);\n      return;\n    }\n    stamp(\"fail\", \"Result area did not render usable output.\", resultHeadline(result));\n  }\n\n  function runSmoke() {\n    const params = new URLSearchParams(window.location.search);\n    if (params.get(\"__qa\") !== \"functional\") return;\n    qaWatchdog = window.setTimeout(function () {\n      stamp(\"fail\", \"QA smoke timed out before the page reported a usable result.\", \"\");\n    }, 7000);\n    const form = findForm();\n    if (!form) {\n      stamp(\"fail\", \"Primary tool form was not found.\", \"\");\n      return;\n    }\n    const result = findResult();\n    const before = resultSignature(result);\n    installModalGuards();\n    try {\n      form.querySelectorAll(\"input, select, textarea\").forEach(applySample);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke sample failed: ${error.message}` : \"QA smoke sample failed before submit.\", \"\");\n      return;\n    }\n    const action = primaryAction(form);\n    try {\n      triggerAction(form, action);\n    } catch (error) {\n      stamp(\"fail\", error && error.message ? `QA smoke submit failed: ${error.message}` : \"QA smoke submit failed.\", \"\");\n      return;\n    }\n    inspectResult(before, 10);\n  }\n\n  window.addEventListener(\"error\", function (event) {\n    const message = event && event.message ? event.message : \"JavaScript runtime error during QA smoke.\";\n    stamp(\"fail\", `QA smoke JS error: ${message}`, \"\");\n  }, { once: true });\n\n  window.addEventListener(\"unhandledrejection\", function (event) {\n    const reason = event && event.reason;\n    const detail = typeof reason === \"string\"\n      ? reason\n      : reason && reason.message\n        ? reason.message\n        : \"Unhandled promise rejection during QA smoke.\";\n    stamp(\"fail\", `QA smoke rejection: ${detail}`, \"\");\n  }, { once: true });\n\n  if (document.readyState === \"loading\") {\n    document.addEventListener(\"DOMContentLoaded\", function () {\n      window.setTimeout(runSmoke, 60);\n    }, { once: true });\n  } else {\n    window.setTimeout(runSmoke, 60);\n  }\n})();\n</script>\n</body>\n</html>",
+    "generation_mode": "direct_html"
+  }
+}
